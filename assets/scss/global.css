@@ -1,0 +1,239 @@
+/* reset */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+html,
+body,
+div,
+input,
+textarea,
+select,
+span,
+a,
+button,
+table,
+tr,
+td,
+th,
+ul,
+ol,
+li,
+button {
+  outline: none;
+  outline-color: transparent;
+  outline-width: 0;
+  outline-style: none;
+  outline-offset: initial;
+  font-family: var(--fo);
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:focus,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+/* google icons */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+/* base root */
+:root {
+  --open-sans: "Open Sans", sans-serif;
+}
+
+/* general */
+body {
+  font-family: var(--open-sans);
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  background: transparent;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+button span {
+  display: block;
+}
+button:before, button:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.im-button-set-1, .im-button-set-2, .im-button-set-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.im-button-set-1 button:after {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  mix-blend-mode: difference;
+}
+.im-button-set-1 button.im-btn-left:after {
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+}
+.im-button-set-1 button.im-btn-top:after {
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+}
+.im-button-set-1 button.im-btn-right:after {
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+}
+.im-button-set-1 button.im-btn-bottom:after {
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+}
+.im-button-set-1 button:hover:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.im-button-set-2 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0.75rem;
+}
+.im-button-set-2 button span {
+  padding: 0 0.25rem;
+}
+.im-button-set-2 button:after {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  mix-blend-mode: difference;
+}
+.im-button-set-2 button.im-btn-left:after {
+  -webkit-transform: rotate(360deg) scale(0);
+          transform: rotate(360deg) scale(0);
+}
+.im-button-set-2 button.im-btn-top:after {
+  -webkit-transform: rotate(-90deg) scale(0);
+          transform: rotate(-90deg) scale(0);
+}
+.im-button-set-2 button.im-btn-right:after {
+  -webkit-transform: rotate(90deg) scale(0);
+          transform: rotate(90deg) scale(0);
+}
+.im-button-set-2 button.im-btn-bottom:after {
+  -webkit-transform: rotate(0) scale(0);
+          transform: rotate(0) scale(0);
+}
+.im-button-set-2 button:hover:after {
+  -webkit-transform: rotate(0) scale(1);
+          transform: rotate(0) scale(1);
+}
+
+.im-button-set-3 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0.75rem;
+  width: 200px;
+}
+.im-button-set-3 button span {
+  padding: 0 0.25rem;
+}
+.im-button-set-3 button:before, .im-button-set-3 button:after {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  mix-blend-mode: difference;
+}
+.im-button-set-3 button.im-btn-left:before {
+  -webkit-transform: translateX(-110%) rotate(45deg);
+          transform: translateX(-110%) rotate(45deg);
+}
+.im-button-set-3 button.im-btn-left:after {
+  -webkit-transform: translateX(110%) rotate(45deg);
+          transform: translateX(110%) rotate(45deg);
+}
+.im-button-set-3 button.im-btn-top:before {
+  -webkit-transform: translateY(-220%) rotate(25deg);
+          transform: translateY(-220%) rotate(25deg);
+}
+.im-button-set-3 button.im-btn-top:after {
+  -webkit-transform: translateY(220%) rotate(25deg);
+          transform: translateY(220%) rotate(25deg);
+}
+.im-button-set-3 button.im-btn-right:before {
+  -webkit-transform: translateX(-110%) rotate(0deg);
+          transform: translateX(-110%) rotate(0deg);
+}
+.im-button-set-3 button.im-btn-right:after {
+  -webkit-transform: translateX(110%) rotate(0deg);
+          transform: translateX(110%) rotate(0deg);
+}
+.im-button-set-3 button.im-btn-bottom:before {
+  -webkit-transform: translateY(-110%) rotate(0deg);
+          transform: translateY(-110%) rotate(0deg);
+}
+.im-button-set-3 button.im-btn-bottom:after {
+  -webkit-transform: translateY(110%) rotate(0deg);
+          transform: translateY(110%) rotate(0deg);
+}
+.im-button-set-3 button.im-btn-bottom:hover:before {
+  -webkit-transform: translateY(-50%) rotate(0deg);
+          transform: translateY(-50%) rotate(0deg);
+}
+.im-button-set-3 button.im-btn-bottom:hover:after {
+  -webkit-transform: translateY(50%) rotate(0deg);
+          transform: translateY(50%) rotate(0deg);
+}
+.im-button-set-3 button:hover:before {
+  -webkit-transform: scale(1) translateX(-50%) rotate(0deg);
+          transform: scale(1) translateX(-50%) rotate(0deg);
+}
+.im-button-set-3 button:hover:after {
+  -webkit-transform: scale(1) translateX(50%) rotate(0deg);
+          transform: scale(1) translateX(50%) rotate(0deg);
+}/*# sourceMappingURL=global.css.map */

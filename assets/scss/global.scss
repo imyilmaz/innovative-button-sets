@@ -1,0 +1,186 @@
+@import 'base';
+
+button{
+    border: none;
+    background: transparent;
+    padding: 1rem;
+    font-size: 1rem;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    span{
+        display: block;
+    }
+    &:before,&:after{
+        content:"";
+        position: absolute;
+        transition: .4s;
+    }
+}
+.im-button-set{
+    &-1,&-2,&-3{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}//im-button-sets
+.im-button-set-1{
+    button{
+        &:after{
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom:  0;
+            background: #ffffff;
+            mix-blend-mode: difference;
+        }
+        &.im-btn{
+            &-left{
+                &:after{
+                    transform: translateX(-110%);
+                }
+            }
+            &-top{
+                &:after{
+                    transform: translateY(-110%);
+                }
+            }
+            &-right{
+                &:after{
+                    transform: translateX(110%);
+                }
+            }
+            &-bottom{
+                &:after{
+                    transform: translateY(110%);
+                }
+            }
+        }
+        &:hover{
+            &:after{
+                transform: translateX(0);
+            }
+        }
+    }
+}//im-button-set-1
+
+
+.im-button-set-2{
+    button{
+        display: flex;
+        align-items: center;
+        padding: 1rem .75rem;
+        span{
+            padding: 0 .25rem;
+        }
+        &:after{
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom:  0;
+            background: #ffffff;
+            mix-blend-mode: difference;
+        }
+        &.im-btn{
+            &-left{
+                &:after{
+                    transform: rotate(360deg) scale(0);
+                }
+            }
+            &-top{
+                &:after{
+                    transform: rotate(-90deg) scale(0);
+                }
+            }
+            &-right{
+                &:after{
+                    transform: rotate(90deg) scale(0);
+                }
+            }
+            &-bottom{
+                &:after{
+                    transform: rotate(0) scale(0);
+                }
+            }
+        }
+        &:hover{
+            &:after{
+                transform: rotate(0) scale(1);
+            }
+        }
+    }
+}//im-button-set-2
+
+.im-button-set-3{
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem .75rem;
+        width: 200px;
+        span{
+            padding: 0 .25rem;
+        }
+        &:before,&:after{
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom:  0;
+            background: #ffffff;
+            mix-blend-mode: difference;
+        }
+        &.im-btn{
+            &-left{
+                &:before{
+                    transform: translateX(-110%) rotate(45deg)
+                }
+                &:after{
+                    transform: translateX(110%) rotate(45deg)
+                }
+            }
+            &-top{
+                &:before{
+                    transform: translateY(-220%) rotate(25deg)
+                }
+                &:after{
+                    transform: translateY(220%) rotate(25deg)
+                }
+            }
+            &-right{
+                &:before{
+                    transform: translateX(-110%) rotate(0deg)
+                }
+                &:after{
+                    transform: translateX(110%) rotate(0deg)
+                }
+            }
+            &-bottom{
+                &:before{
+                    transform: translateY(-110%) rotate(0deg)
+                }
+                &:after{
+                    transform: translateY(110%) rotate(0deg)
+                }
+                &:hover{
+                    &:before{
+                        transform: translateY(-50%) rotate(0deg)
+                    }
+                    &:after{
+                        transform: translateY(50%) rotate(0deg)
+                    }
+                }
+            }
+        }
+        &:hover{
+            &:before{
+                transform: scale(1) translateX(-50%) rotate(0deg)
+            }
+            &:after{
+                transform: scale(1) translateX(50%) rotate(0deg)
+            }
+        }
+    }
+}//im-button-set-2
+
