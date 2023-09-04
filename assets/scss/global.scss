@@ -38,8 +38,15 @@ button{
         }
         &.im-btn{
             &-left{
+                background: #000;
+                color: #fff;
+                font-weight: 700;
                 &:after{
-                    transform: translateX(-110%);
+                    transform: translateX(-110%);    
+                    mix-blend-mode: multiply;
+                    background: rgb(14,0,255);
+                    background: linear-gradient(45deg, rgba(14,0,255,1) 0%, rgba(205,255,0,1) 12%, rgba(255,0,68,1) 31%, rgba(255,191,0,1) 57%, rgba(24,0,255,1) 72%, rgba(7,255,0,1) 85%, rgba(0,255,169,1) 92%, rgba(0,212,255,1) 100%);
+                
                 }
             }
             &-top{
@@ -175,12 +182,23 @@ button{
         }
         &:hover{
             &:before{
-                transform: scale(1) translateX(-50%) rotate(0deg)
+                transform: translateX(-50%) rotate(0deg)
             }
             &:after{
-                transform: scale(1) translateX(50%) rotate(0deg)
+                transform: translateX(50%) rotate(0deg)
             }
         }
     }
 }//im-button-set-2
+
+.footer{
+    display: flex;
+    justify-content: center;
+    a{
+        display: block;
+        font-size: 1rem;
+        padding: 1rem;
+        color: #000;
+    }
+}
 
